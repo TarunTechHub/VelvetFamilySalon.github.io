@@ -1,0 +1,366 @@
+/* General Styles */
+body {
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  perspective: 1500px; /* Adding perspective for the entire page */
+  overflow-x: hidden;
+}
+
+/* Header Section */
+header {
+  background-color: #212529;
+  color: white;
+  padding: 50px 0;
+  transform: translateZ(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  transform: rotateY(15deg);
+  transition: transform 0.5s ease;
+}
+
+header p {
+  font-size: 1.25rem;
+  opacity: 0.8;
+}
+
+/* Navbar Section */
+.navbar {
+  padding: 1rem 0;
+  background-color: #f8f9fa;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transform: translateZ(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar .navbar-brand {
+  font-size: 1.75rem;
+  font-weight: 600;
+  transition: transform 0.3s ease;
+}
+
+.navbar-nav .nav-item .nav-link {
+  color: #495057;
+  padding: 10px 15px;
+  font-size: 1.1rem;
+  position: relative;
+}
+
+.navbar-nav .nav-item .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #212529;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.navbar-nav .nav-item .nav-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+  background-color: #212529;
+  color: white;
+  transform: translateY(-5px);
+}
+
+/* Image Slider */
+.carousel-item img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: center center;
+  border-radius: 10px;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  transform: scale(1.1);
+  opacity: 0.7;
+}
+
+.carousel-item img:hover {
+  transform: scale(1.15);
+  opacity: 1;
+}
+
+/* About Section */
+#about {
+  background-color: #f8f9fa;
+  padding: 60px 0;
+  transform: translateZ(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+#about h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  transform: rotateY(10deg);
+}
+
+#about p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+
+#about:hover p {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* Services Section */
+#services {
+  padding: 60px 0;
+  background-color: #ffffff;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+#services h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  transform: rotateY(-10deg);
+  transition: transform 0.3s ease;
+}
+
+.service-box {
+  padding: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  text-align: center;
+  transform: rotateX(0deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+.service-box:hover {
+  transform: rotateY(15deg) scale(1.05);
+}
+
+.service-box i {
+  color: #212529;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.service-box:hover i {
+  transform: scale(1.1);
+}
+
+.service-box h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  transform: translateZ(0);
+}
+
+.service-box p {
+  font-size: 1rem;
+  color: #6c757d;
+}
+
+/* Lookbook Section */
+#lookbook {
+  background-color: #f8f9fa;
+  padding: 60px 0;
+  position: relative;
+  perspective: 1500px;
+}
+
+#lookbook .carousel-inner {
+  position: relative;
+  height: 450px;
+  overflow: hidden;
+}
+
+#lookbook .carousel-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.5s ease, opacity 1s ease;
+  transform-style: preserve-3d;
+  opacity: 0.7;
+}
+
+#lookbook .carousel-inner .active img {
+  opacity: 1;
+  transform: scale(1.1) rotateY(10deg);
+}
+
+#lookbook .carousel-caption h5 {
+  font-size: 1.75rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%) rotateX(10deg);
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+#lookbook .carousel-caption h5:hover {
+  transform: translateX(-50%) rotateX(0deg) scale(1.1);
+}
+
+/* Contact Section */
+#contact {
+  background-color: #ffffff;
+  padding: 60px 0;
+  transform: translateZ(0);
+}
+
+#contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+#contact .form-label {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+#contact .form-control {
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+#contact button {
+  background-color: #212529;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  transition: background-color 0.3s, transform 0.3s ease;
+}
+
+#contact button:hover {
+  background-color: #495057;
+  transform: translateY(-5px);
+}
+
+/* Footer Section */
+footer {
+  background-color: #212529;
+  color: white;
+  padding: 20px 0;
+  transform: translateZ(0);
+}
+
+footer p {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+footer .fa {
+  font-size: 1.5rem;
+  margin: 0 15px;
+  transition: color 0.3s, transform 0.3s ease-in-out;
+}
+
+footer .fa:hover {
+  color: #f8f9fa;
+  transform: scale(1.1);
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .navbar .navbar-brand {
+    font-size: 1.5rem;
+  }
+  .navbar-nav .nav-item .nav-link {
+    padding: 8px 12px;
+    font-size: 1rem;
+  }
+  header h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar-nav .nav-item .nav-link {
+    padding: 8px 10px;
+    font-size: 1rem;
+  }
+
+  #services .service-box {
+    margin-bottom: 20px;
+    padding: 20px;
+  }
+
+  #lookbook .carousel-inner img {
+    height: 300px;
+  }
+
+  .carousel-item img {
+    height: 250px;
+  }
+
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  header h1 {
+    font-size: 2.5rem;
+  }
+
+  #about h2 {
+    font-size: 2rem;
+  }
+
+  #services h2 {
+    font-size: 2rem;
+  }
+
+  #contact h2 {
+    font-size: 2rem;
+  }
+
+  footer .fa {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  header h1 {
+    font-size: 2.2rem;
+  }
+
+  #about h2 {
+    font-size: 1.8rem;
+  }
+
+  #services h2 {
+    font-size: 1.8rem;
+  }
+
+  .navbar-nav .nav-item .nav-link {
+    font-size: 0.9rem;
+  }
+
+  #lookbook .carousel-inner img {
+    height: 250px;
+  }
+
+  footer .fa {
+    font-size: 1.5rem;
+  }
+
+  .carousel-item img {
+    height: 200px;
+  }
+}
